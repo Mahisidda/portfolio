@@ -105,9 +105,9 @@ const PortfolioPage = () => {
         </div>
       </div>
 
-      {/* Section: GitHub Presence - NEWLY ADDED */}
+      {/* Section: GitHub Presence*/}
       <section className="py-10 md:py-16 bg-white" data-aos="fade-up" data-aos-delay="250">
-        <div className="container mx-auto px-9">
+        <div className="container mx-auto px-9 max-w-7xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-black tracking-tight text-center">
             GitHub
           </h2>
