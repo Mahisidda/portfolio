@@ -11,19 +11,20 @@ function ProjectsPage() {
       demoLink: "#"
     },
     {
+      title: "Brec",
+      description: "ML-powered recommendation engine using Neural Collaborative Filtering, processing 1M+ ratings from Book-Crossing dataset with real-time updates.",
+      tech: "Python, Flask, Next.js, Tailwind CSS CF FAISS ",
+      link: "https://github.com/Mahisidda/Brec",
+      demoLink: "https://brec.mahisidda.com"
+    },
+    {
       title: "iVote",
       description: "Online Voting System where users can create and participate in elections, with real-time updates and secure authentication.",
       tech: "Python · SQLite · Django Framework · HTML · CSS · JavaScript · Version Control(Git)",
       link: "https://github.com/Mahisidda/iVote",
       demoLink: "#"
     },
-    {
-      title: "Brec",
-      description: "ML-powered recommendation engine using Neural Collaborative Filtering, processing 1M+ ratings from Book-Crossing dataset with real-time updates.",
-      tech: "Python, Flask, Next.js, Tailwind CSS CF FAISS ",
-      link: "https://github.com/Mahisidda/Brec",
-      demoLink: "https://brec.mahisidda.com"
-    }
+  
   ];
 
   // Add error handling for empty projects
@@ -80,7 +81,12 @@ function ProjectsPage() {
                   ) : (
                     <span className="text-gray-500 text-sm">GitHub: Coming soon</span>
                   )}
-                  {project.demoLink && project.demoLink !== "#" ? (
+                  {project.title === "Fake News Detection" && project.demoLink === "#" ? (
+                    <div className="flex items-center">
+                      <span className="w-3 h-3 bg-green-600 rounded-full inline-block mr-2 animate-shrink-bulge"></span>
+                      <span className="text-sm text-red-700 font-medium">Currently Working</span>
+                    </div>
+                  ) : project.demoLink && project.demoLink !== "#" ? (
                     <Link
                       href={project.demoLink}
                       className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-red-700 hover:bg-yellow-600 transition-colors"
