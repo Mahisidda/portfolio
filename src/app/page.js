@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import { SiX } from 'react-icons/si';
+import GitHubContributions from '@/components/GitHubContributions';
 
 const PortfolioPage = () => {
   useEffect(() => {
@@ -40,11 +41,11 @@ const PortfolioPage = () => {
               </p>
             </div>
             <p className="text-base sm:text-lg leading-relaxed text-black max-w-md text-justify" data-aos="fade-right" data-aos-delay="200">
-              Hola! I am Mahi, an AI Engineer who loves training neural networks and building smart systems that solve real problems.<br />
+              Hola! I am Mahi, an AI/ML Engineer who loves training neural networks and building smart systems that solve real problems.<br />
               
-              With hands-on experience in LLMs, RAG pipelines, and ML system design, I specialize in bridging the gap between cutting-edge research and real-world applications.<br />
+              With hands-on experience in LLMs, RAG pipelines, and ML system design, I specialize in bridging the gap between cutting-edge research and real world applications.<br />
 
-              Recently, I built a production-grade RAG model for a startup called Hashmint during a two-month AI internship — tailoring it to user needs from the ground up.<br />
+              Recently, I built a production grade RAG model for a startup called Hashmint during a two month AI internship tailoring it to user needs from the ground up.<br />
 
               I'm currently pursuing my Master's at Arizona State University, diving deep into deep learning, LLMs, and applied AI.
             </p>
@@ -94,7 +95,7 @@ const PortfolioPage = () => {
             <div className="space-y-8">
               <div>
                 <p className="text-base sm:text-lg leading-relaxed max-w-md text-justify text-gray-700 ">
-                  Here I can describe the various technologies, programming languages, frameworks, and other tools I'm proficient with. For example, Python, TensorFlow, PyTorch, scikit-learn, AWS, Docker, Git, etc.
+                  Here I can describe the various technologies, programming languages, frameworks, and other tools I\'m proficient with. For example, Python, TensorFlow, PyTorch, scikit-learn, AWS, Docker, Git, etc.
                 </p>
               </div>
               {/* Add more tool details or categories here as needed */}
@@ -103,6 +104,16 @@ const PortfolioPage = () => {
           {/* Column 2: Project Image - REMOVED */}
         </div>
       </div>
+
+      {/* Section: GitHub Presence - NEWLY ADDED */}
+      <section className="py-10 md:py-16 bg-white" data-aos="fade-up" data-aos-delay="250">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-black tracking-tight text-center">
+            GitHub
+          </h2>
+          <GitHubContributions />
+        </div>
+      </section>
 
       {/* Section 4: Let's Make AI Talk - Full Bleed Background */}
       <div className="mt-10 md:mt-16 bg-black flex flex-col flex-grow" data-aos="fade-up">

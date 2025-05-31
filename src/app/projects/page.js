@@ -23,20 +23,6 @@ function ProjectsPage() {
       tech: "Python, Flask, Next.js, Tailwind CSS CF FAISS ",
       link: "https://github.com/Mahisidda/Brec",
       demoLink: "https://brec.mahisidda.com"
-    },
-    {
-      title: "ECDSA Encrypted Chat Application",
-      description: "End-to-end encrypted messaging system using Elliptic Curve Digital Signature Algorithm (ECDSA) for message authentication and forward secrecy.",
-      tech: "",
-      link: "#",
-      demoLink: "#"
-    },
-    {
-      title: "Capstone Project",
-      description: "ML-powered recommendation engine using Neural Collaborative Filtering, processing 1M+ ratings from Book-Crossing dataset with real-time updates via Kafka.",
-      tech: "Python · TensorFlow · Apache Spark · Kafka",
-      link: "#",
-      demoLink: "#"
     }
   ];
 
