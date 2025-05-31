@@ -78,7 +78,7 @@ const GitHubContributions = () => {
   const dayLabelSize = 'h-[11px]'; // Match square height
 
   return (
-    <div className="p-3 bg-[#3A414C] text-xs w-full max-w-max mx-auto rounded-lg shadow-md">
+    <div className="p-3 bg-[#3A414C] text-xs w-full max-w-5xl mx-auto rounded-lg shadow-md">
       {/* Top section: Total contributions and year */} 
       <div className="flex justify-between items-center mb-2 px-1">
         <h3 className="text-xs font-medium text-slate-100">
@@ -89,8 +89,8 @@ const GitHubContributions = () => {
 
       {/* Graph Area */} 
       <div className="relative">
-        {/* Month Markers */} 
-        <div className={`flex h-4 mb-1 ml-[26px]`}> {/* ml to align with grid area after day labels */} 
+        {/* Month Markers: Positioned above the scrollable area. Adjust ml to align with the start of the grid data. */}
+        <div className={`flex h-4 mb-1 ml-[calc(24px+0.375rem)]`}> {/* 24px for labels width + 0.375rem for mr-1.5 on labels container */}
           {monthMarkers.map((month) => (
             <div 
               key={month.name + month.weekIndex}
@@ -102,9 +102,10 @@ const GitHubContributions = () => {
           ))}
         </div>
 
-        <div className="flex">
-          {/* Weekday Labels */} 
-          <div className={`grid grid-rows-7 ${squareGap} mr-1.5 w-[24px]`}>
+        {/* This flex container handles the sticky labels and scrollable grid */}
+        <div className="flex overflow-x-auto styled-scrollbar pb-2">
+          {/* Weekday Labels: Sticky to the left */}
+          <div className={`sticky left-0 z-10 bg-[#3A414C] grid grid-rows-7 ${squareGap} mr-1.5 w-[24px]`}>
             {displayWeekDays.map((dayLabel, index) => (
               <div 
                 key={index} 
@@ -113,7 +114,7 @@ const GitHubContributions = () => {
               </div>
             ))}
           </div>
-          {/* Contribution Grid */} 
+          {/* Contribution Grid: Scrolls horizontally */}
           <div className={`grid grid-flow-col auto-cols-max ${squareGap} bg-[#0d1117] p-0.5 rounded`}> {/* Sharper corners for squares by rounding container */} 
             {calendar.weeks.map((week, weekIndex) => (
                 <div key={`week-${weekIndex}`} className={`grid grid-rows-7 ${squareGap}`}>
