@@ -8,30 +8,24 @@ export default function BlogPage({ params }) {
 
   if (!blog) {
     return (
-      <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="max-w-4xl font-mono mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold">Blog not found</h1>
       </div>
     );
   }
 
-  // Split the description into paragraphs
-  const paragraphs = blog.description.split('\n\n');
-
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
+    <div className="max-w-4xl font-mono mx-auto px-5 py-8">
+      <h1 className="text-3xl font-mono font-bold mb-4">{blog.title}</h1>
       <div className="flex items-center  text-sm text-gray-900 mb-6">
         <span>{blog.date}</span>
         <span className="mx-2">•</span>
         <span>{blog.readTime}</span>
       </div>
-      <div className="prose max-w-none">
-        {paragraphs.map((paragraph, index) => (
-          <p key={index} className="text-justify text-gray-600 mb-4">
-            {paragraph}
-          </p>
-        ))}
-      </div>
+      <div 
+        className="prose max-w-none text-justify text-black-600" 
+        dangerouslySetInnerHTML={{ __html: blog.description }}
+      />
     </div>
   );
 }

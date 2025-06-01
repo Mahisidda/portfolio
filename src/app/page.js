@@ -61,7 +61,7 @@ const PortfolioPage = () => {
             </h2>
             <div className="space-y-8">
               <div>
-                <p className="text-base sm:text-lg leading-relaxed max-w-md text-justify text-gray-700 ">
+                <p className="text-base sm:text-lg leading-relaxed max-w-md text-justify text-black ">
                 I've worked on <Link href="/projects" legacyBehavior><a className="text-red-600 hover:text-yellow-600 font-semibold underline"> Multiple</a></Link> projects, 
                 including a Fake News Detection system using multimodal learning, a Book Recommendation engine powered by collaborative filtering, and iVote, 
                 a full-stack web application for secure digital voting. These projects strengthened my ability to build robust end-to-end ML pipelines, 
@@ -94,8 +94,8 @@ const PortfolioPage = () => {
             </h2>
             <div className="space-y-8">
               <div>
-                <p className="text-base sm:text-lg leading-relaxed max-w-md text-justify text-gray-700 ">
-                  Here I can describe the various technologies, programming languages, frameworks, and other tools I\'m proficient with. For example, Python, TensorFlow, PyTorch, scikit-learn, AWS, Docker, Git, etc.
+                <p className="text-base sm:text-lg leading-relaxed max-w-md text-justify text-black ">
+                  So far I have worked with Python, Scikit-learn, Docker, Git, Next.js, React, Tailwind CSS, and more.
                 </p>
               </div>
               {/* Add more tool details or categories here as needed */}
@@ -106,22 +106,22 @@ const PortfolioPage = () => {
       </div>
 
       {/* Section: GitHub Presence*/}
-      <section className="py-10 md:py-16 bg-white" data-aos="fade-up" data-aos-delay="250">
-        <div className="container mx-auto px-9 max-w-7xl">
+      {/* <section className="py-10 md:py-16 bg-white max-w-7xl overflow-hidden" data-aos="fade-up" data-aos-delay="250">
+        <div className="container mx-auto px-9">
           <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-black tracking-tight text-center">
             GitHub
           </h2>
           <GitHubContributions />
         </div>
-      </section>
+      </section> */}
 
       {/* Section 4: Let's Make AI Talk - Full Bleed Background */}
       <div className="mt-10 md:mt-16 bg-black flex flex-col flex-grow" data-aos="fade-up">
         {/* Inner container for content alignment, padding, and original styling */}
         <div className="max-w-7xl mx-auto py-8 md:py-12 px-6 sm:px-10 md:px-[50px] text-white rounded-lg flex flex-col justify-center flex-grow">
           <div className="text-center">
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
-              Let's Make AI Talk
+            <h2 className="text-2xl sm:text-5xl font-extrabold tracking-tight mb-4">
+            Let's engineer what’s next 
             </h2>
             <p className="text-lg sm:text-m mb-8 max-w-2xl mx-auto">
               I would like to connect with you to discuss more.

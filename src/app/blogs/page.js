@@ -4,7 +4,7 @@ import { blogs } from './blogsData';
 
 export default function BlogsPage() {
   return (
-    <div className="px-4 py-8">
+    <div className="px-4 py-8 max-w-7xl mx-auto">
       <div className="space-y-4">
         {blogs.map((blog, index) => (
           <Link 

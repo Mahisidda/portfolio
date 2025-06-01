@@ -55,6 +55,7 @@ const GitHubContributions = () => {
   
   const monthMarkers = [];
   let lastMonth = -1;
+  const totalWeeks = calendar.weeks.length;
 
   calendar.weeks.forEach((week, weekIndex) => {
     if (week.contributionDays.length > 0) {
@@ -73,9 +74,8 @@ const GitHubContributions = () => {
     }
   });
 
-  const squareSize = 'w-[11px] h-[11px]'; // Slightly larger squares
-  const squareGap = 'gap-0.5'; // Tailwind class for 2px gap
-  const dayLabelSize = 'h-[11px]'; // Match square height
+  const daySquareSize = "10px"; // Match GitHub's <td> height and implied width
+  const tableBorderSpacing = "3px";
 
   return (
     <div className="p-3 bg-[#3A414C] text-xs w-full max-w-max mx-auto rounded-lg shadow-md">
@@ -90,12 +90,12 @@ const GitHubContributions = () => {
       {/* Graph Area */} 
       <div className="relative">
         {/* Month Markers */} 
-        <div className={`flex h-4 mb-1 ml-[26px]`}> {/* ml to align with grid area after day labels */} 
+        <div className={`flex h-4 mb-1 ml-[28px]`}> {/* Adjusted margin for day labels */} 
           {monthMarkers.map((month) => (
             <div 
               key={month.name + month.weekIndex}
               className="text-[9px] text-slate-400 absolute"
-              style={{ left: `${(month.weekIndex / calendar.weeks.length) * 100}%` }}
+              style={{ left: `${(month.weekIndex / totalWeeks) * 100}%` }}
             >
               {month.name}
             </div>
@@ -104,33 +104,45 @@ const GitHubContributions = () => {
 
         <div className="flex">
           {/* Weekday Labels */} 
-          <div className={`grid grid-rows-7 ${squareGap} mr-1.5 w-[24px]`}>
+          <div className={`grid grid-rows-7 mr-1.5 w-[24px]`} style={{ rowGap: tableBorderSpacing }}>
             {displayWeekDays.map((dayLabel, index) => (
               <div 
                 key={index} 
-                className={`${dayLabelSize} text-[9px] text-slate-400 flex items-center ${dayLabel ? '' : 'opacity-0'}`}>
+                className={`h-[${daySquareSize}] text-[9px] text-slate-400 flex items-center ${dayLabel ? '' : 'opacity-0'}`}>
                 {dayLabel}
               </div>
             ))}
           </div>
           {/* Contribution Grid */} 
-          <div className={`grid grid-flow-col auto-cols-max ${squareGap} bg-[#0d1117] p-0.5 rounded`}> {/* Sharper corners for squares by rounding container */} 
-            {calendar.weeks.map((week, weekIndex) => (
-                <div key={`week-${weekIndex}`} className={`grid grid-rows-7 ${squareGap}`}>
-                {week.contributionDays.map((day, dayIndex) => {
+          <table 
+            className="overflow-hidden relative"
+            style={{ 
+                borderSpacing: tableBorderSpacing, 
+                borderCollapse: 'separate', /* Required for border-spacing to work */
+                backgroundColor: '#0d1117', /* This will be the color of the "gaps" */
+            }}
+          >
+            <caption className="sr-only">Contribution Graph</caption>
+            { /* GitHub uses an empty thead, so we can omit or add one if needed for accessibility */}
+            <tbody>
+              {[0, 1, 2, 3, 4, 5, 6].map(dayIndex => (
+                <tr key={`day-row-${dayIndex}`} style={{ height: daySquareSize }}>
+                  {calendar.weeks.map((week, weekIndex) => {
+                    const day = week.contributionDays[dayIndex];
                     const bgColor = day ? getColorForContributions(day.contributionCount) : contributionColors[0];
                     return (
-                    <div
+                      <td
                         key={day ? day.date : `empty-${weekIndex}-${dayIndex}`}
-                        className={`${squareSize} rounded-[2px] transition-transform duration-100 ease-out hover:scale-125`}
-                        style={{ backgroundColor: bgColor }}
+                        className={`w-[${daySquareSize}] rounded-[2px] transition-transform duration-100 ease-out hover:scale-125`}
+                        style={{ backgroundColor: bgColor, padding: 0 /* Ensure no extra padding */ }}
                         title={day ? `${day.contributionCount} contributions on ${day.date}` : 'No data'}
-                    ></div>
+                      ></td>
                     );
-                })}
-                </div>
-            ))}
-          </div>
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
 
@@ -147,9 +159,10 @@ const GitHubContributions = () => {
         <div className="flex items-center">
           <span className="mr-1.5 text-[9px] text-slate-400">Less</span>
           <div 
-            className="w-16 h-[10px] rounded-sm border border-gray-700/50"
+            className={`h-[${daySquareSize}] rounded-sm border border-gray-700/50`}
             style={{
-                background: `linear-gradient(to right, ${contributionColors.slice(1).join(', ')})` // Start gradient from L1 color
+                width: 'calc(4 * (10px + 3px) + 10px)', // Approx width of 5 squares with spacing
+                background: `linear-gradient(to right, ${contributionColors.slice(1).join(', ')})`
             }}
           ></div>
           <span className="ml-1.5 text-[9px] text-slate-400">More</span>
