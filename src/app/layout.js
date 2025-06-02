@@ -35,6 +35,11 @@ export default function RootLayout({ children }) {
         <main className="flex-1 w-full pt-20">
           {children}
         </main>
+        <footer className="text-center py-4 font-mono">
+          <p className="text-sm text-gray-500">
+            &copy; 2025 Mahi Sidda
+          </p>
+        </footer>
       </body>
     </html>
   );

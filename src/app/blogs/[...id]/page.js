@@ -1,7 +1,7 @@
 import React from 'react';
 import { blogs } from '../blogsData';
 
-export default function BlogPage({ params }) {
+export default async function BlogPage({ params }) {
   // Since we're using [...id], params.id is an array, so we need to get the first element
   const blogId = Array.isArray(params.id) ? params.id[0] : params.id;
   const blog = blogs.find(blog => blog.id === blogId);
