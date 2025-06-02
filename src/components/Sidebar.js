@@ -69,9 +69,11 @@ const Sidebar = () => {
 
       {/* Right Group: Button & Hamburger Menu Icon */}
       <div className="flex items-center space-x-4">
-        <button className="hidden md:block bg-red-800 text-white font-semibold py-3 px-6 rounded-full text-sm uppercase tracking-wider hover:bg-yellow-600 transition-colors">
-          Let's Connect!
-        </button>
+        <a href="mailto:mahisidda7@gmail.com" className="hidden md:block">
+          <button className="bg-red-800 text-white font-semibold py-3 px-6 rounded-full text-sm uppercase tracking-wider hover:bg-yellow-600 transition-colors">
+            Let's Connect!
+          </button>
+        </a>
 
         {/* Hamburger Menu Button - visible only on small screens */}
         <div className="md:hidden">
@@ -97,9 +99,11 @@ const Sidebar = () => {
             <li><Link href="/resume" className="block text-sm font-semibold uppercase tracking-wider text-yellow-700 px-2 py-2 hover:bg-gray-100 w-full text-center">RESUME</Link></li>
             <li><Link href="/blogs" className="block text-sm font-semibold uppercase tracking-wider text-yellow-700 px-2 py-2 hover:bg-gray-100 w-full text-center">BLOGS</Link></li>
             <li>
-              <button className="w-full bg-red-800 text-white font-semibold py-3 px-6 text-sm uppercase tracking-wider hover:bg-gray-800 transition-colors mt-2">
-                Let's Connect!
-              </button>
+              <a href="mailto:mahisidda7@gmail.com" className="block w-full px-2">
+                <button className="w-full bg-red-800 text-white font-semibold py-3 px-6 text-sm uppercase tracking-wider hover:bg-gray-800 transition-colors mt-2">
+                  Let's Connect!
+                </button>
+              </a>
             </li>
           </ul>
         </div>
