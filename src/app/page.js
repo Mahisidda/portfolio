@@ -75,16 +75,20 @@ const PortfolioPage = () => {
             </div>
           </div>
           {/* Column 2: Project Image */}
-          <div className="w-full md:w-1/2 md:pl-4 flex justify-center md:justify-start items-start">
-            <img
-              src="project.png"
-              alt="Project Showcase Visual"
-              className="rounded-lg shadow-xl object-cover"
-              style={{ width: '100%', height: 'auto', maxHeight: '400px' }}
-            />
-          </div>
+          <div style={{ marginTop: '20px', marginBottom: '20px', maxWidth: '100%' }}>
+      <video
+        style={{ width: '100%', height: 'auto', maxHeight: '500px', display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
+        autoPlay
+        loop
+        muted
+        playsInline
+        src="/brec-gr.mp4"
+      >
+        Your browser does not support the video tag.
+      </video>
+    </div>
         </div>
-
+        
         {/* Section 3: Tools I Work With */}
         <div className="flex flex-col md:flex-row mt-10 md:mt-16" data-aos="fade-up" data-aos-delay="200">
           {/* Column 1: Tools Description - Now takes full width */}
@@ -121,7 +125,7 @@ const PortfolioPage = () => {
         <div className="max-w-7xl mx-auto py-8 md:py-12 px-6 sm:px-10 md:px-[50px] text-white rounded-lg flex flex-col justify-center flex-grow">
           <div className="text-center">
             <h2 className="text-2xl sm:text-5xl font-extrabold tracking-tight mb-4">
-            Let's engineer what’s next 
+            Let's engineer what's next 
             </h2>
             <p className="text-lg sm:text-m mb-8 max-w-2xl mx-auto">
               I would like to connect with you to discuss more.

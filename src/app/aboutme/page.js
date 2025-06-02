@@ -39,7 +39,9 @@ function About() {
         <div className="space-y-2">
           <h2 className="text-2xl font-mono font-bold text-gray-800 mb-2">Building Tomorrow's Intelligent Solutions</h2>
           <p className="text-base font-mono text-justify text-gray-700">
-            I'm now focused on bridging AI's theoretical promise with real-world implementation. My projects span generative models, document intelligence, and ethical AI frameworks, always prioritizing solutions that solve tangible challenges. Whether enhancing cybersecurity through machine learning or designing adaptive NLP systems, I aim to create tools that empower industries while maintaining cultural sensitivity and ethical responsibility.
+            I'm now focused on bridging AI's theoretical promise with real-world implementation. 
+            My projects span generative models, document intelligence, and ethical AI frameworks, always prioritizing solutions that solve tangible challenges. 
+            Whether enhancing cybersecurity through machine learning or designing adaptive NLP systems, I aim to create tools that empower industries while maintaining cultural sensitivity and ethical responsibility.
           </p>
         </div>
       </div>
@@ -73,16 +75,16 @@ function About() {
           >
             <FaGithub size={28} />
           </a>
-          <a 
+          {/* <a 
             href="https://x.com/Mahi_Sidda" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-gray-900 hover:text-gray-800 transition-all duration-300"
           >
             <SiX size={28} />
-          </a>
+          </a> */}
           <a 
-            href="mailto:msidda@asu.edu" 
+            href="mailto:mahisidda7@gmail.com" 
             className="text-gray-900 hover:text-gray-800 transition-all duration-300"
           >
             <FiMail size={28} />
