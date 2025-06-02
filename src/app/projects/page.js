@@ -6,13 +6,13 @@ function ProjectsPage() {
     {
       title: "Fake News Detection",
       description: "Few shot based Prompt based tuning with knowledge grounding framework for fake news detection.",
-      tech: "Python · TensorFlow · Apache Spark · Kafka",
+      tech: "Proposed stack for now: BERT, Prompt Tuning, Knowledge Grounding",
       link: "#",
       demoLink: "#"
     },
     {
       title: "Brec",
-      description: "ML-powered recommendation engine using Neural Collaborative Filtering, processing 1M+ ratings from Book-Crossing dataset with real-time updates.",
+      description: "Production-grade book recommendation engine powered by collaborative filtering and FAISS, serving real-time personalized results from 1M+ ratings. <br/> Read my Blog about it <a href='https://portfolio.mahisidda.com/blogs/1' target='_blank' rel='noopener noreferrer' class='text-red-700 hover:underline'> here </a>",
       tech: "Python, Flask, Next.js, Tailwind CSS CF FAISS ",
       link: "https://github.com/Mahisidda/Brec",
       demoLink: "https://brec.mahisidda.com"
@@ -61,7 +61,10 @@ function ProjectsPage() {
                 >
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p 
+                  className="text-gray-600 mb-4"
+                  dangerouslySetInnerHTML={{ __html: project.description }}
+                />
                 <div className="mb-4">
                   <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-medium text-gray-700">
                     {project.tech}
@@ -71,7 +74,7 @@ function ProjectsPage() {
                   {project.link !== "#" ? (
                     <Link
                       href={project.link}
-                      className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-yellow-600 hover:bg-red-700 transition-colors"
+                      className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-black hover:bg-red-700 transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`View ${project.title} project on GitHub`}
@@ -89,7 +92,7 @@ function ProjectsPage() {
                   ) : project.demoLink && project.demoLink !== "#" ? (
                     <Link
                       href={project.demoLink}
-                      className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-red-700 hover:bg-yellow-600 transition-colors"
+                      className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-black hover:bg-red-700 transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`View live demo of ${project.title}`}

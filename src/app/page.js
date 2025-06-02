@@ -34,10 +34,10 @@ const PortfolioPage = () => {
             {/* Container for Mahi Sidda name */}
             <div className="mb-5 leading-tight md:leading-normal" data-aos="fade-left" data-aos-delay="100">
               <h1 className="font-sans text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter text-black">
-                Mahi
+                Mahi Sidda
               </h1>
               <p className="font-sans text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-normal -mt-2 sm:-mt-3 text-black">
-                Sidda
+                
               </p>
             </div>
             <p className="text-base sm:text-lg leading-relaxed text-black max-w-md text-justify" data-aos="fade-right" data-aos-delay="200">
@@ -45,7 +45,7 @@ const PortfolioPage = () => {
               
               With hands-on experience in LLMs, RAG pipelines, and ML system design, I specialize in bridging the gap between cutting-edge research and real world applications.<br />
 
-              Recently, I built a production grade RAG model for a startup called Hashmint during a two month AI internship tailoring it to user needs from the ground up.<br />
+              Recently, I built a production grade RAG model for a startup called <a href="https://hashmint.in" target="_blank" rel="noopener noreferrer" className="text-black hover:text-yellow-600 font-semibold underline">hashmint.</a> during a two month AI internship tailoring it to user needs from the ground up.<br />
 
               I'm currently pursuing my Master's at Arizona State University, diving deep into deep learning, LLMs, and applied AI.
             </p>
@@ -62,7 +62,7 @@ const PortfolioPage = () => {
             <div className="space-y-8">
               <div>
                 <p className="text-base sm:text-lg leading-relaxed max-w-md text-justify text-black ">
-                I've worked on <Link href="/projects" legacyBehavior><a className="text-red-600 hover:text-yellow-600 font-semibold underline"> Multiple</a></Link> projects, 
+                I've worked on <Link href="/projects" legacyBehavior><a className="text-red-600 hover:text-yellow-600 font-semibold underline"> multiple impactful projects</a></Link>, 
                 including a Fake News Detection system using multimodal learning, a Book Recommendation engine powered by collaborative filtering, and iVote, 
                 a full-stack web application for secure digital voting. These projects strengthened my ability to build robust end-to-end ML pipelines, 
                 apply deep learning techniques effectively, and develop AI solutions aligned with real-world user needs.
@@ -97,11 +97,10 @@ const PortfolioPage = () => {
               Tools I Work With
             </h2>
             <div className="space-y-8">
-              <div>
-                <p className="text-base sm:text-lg leading-relaxed max-w-md text-justify text-black ">
-                  So far I have worked with Python, Scikit-learn, Docker, Git, Next.js, React, Tailwind CSS, and more.
-                </p>
-              </div>
+                <p className="text-base sm:text-lg leading-relaxed max-w-md text-justify text-black "> I've worked with a  
+                  worked with <Link href="/skills" legacyBehavior><a className="text-red-600 hover:text-yellow-600 font-semibold underline">broad range of tools</a></Link> , 
+                  but the ones I enjoy and frequently use include:
+                   FAISS, scikit-learn, NumPy, Pandas,Flask, Redis etc.,                </p>
               {/* Add more tool details or categories here as needed */}
             </div>
           </div>
@@ -148,6 +147,10 @@ const PortfolioPage = () => {
           </div>
         </div>
       </div>
+
+      <footer className="bg-black text-white text-sm text-center py-8">
+        <p>&copy; 2025 Mahi Sidda</p>
+      </footer>
     </div>
   );
 };

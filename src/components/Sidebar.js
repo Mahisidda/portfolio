@@ -1,13 +1,49 @@
 // components/Sidebar.js (acting as TopNavbar)
 "use client";
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Sidebar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // Initial state: blurry, as this is for "at top" and "scrolling down".
+  const [navbarBgClass, setNavbarBgClass] = useState('bg-white/50 backdrop-blur-md'); 
+  const [lastKnownScrollY, setLastKnownScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setLastKnownScrollY(prevScrollY_from_state => {
+        if (currentScrollY === 0) { // At the top
+          setNavbarBgClass('bg-white/50 backdrop-blur-md'); // Blurry
+        } else if (currentScrollY < prevScrollY_from_state) { // Scrolling up (and not at the top)
+          setNavbarBgClass('bg-transparent'); // Transparent
+        } else if (currentScrollY > prevScrollY_from_state) { // Scrolling down
+          setNavbarBgClass('bg-white/50 backdrop-blur-md'); // Blurry
+        }
+        return currentScrollY; // Update lastKnownScrollY state
+      });
+    };
+
+    // Set initial state on mount
+    const initialScrollY = window.scrollY;
+    if (initialScrollY === 0) {
+      setNavbarBgClass('bg-white/50 backdrop-blur-md'); // Blurry if at top
+    } else {
+      // If loaded scrolled, start blurry (as if scrolled down to this point)
+      setNavbarBgClass('bg-white/50 backdrop-blur-md'); 
+    }
+    setLastKnownScrollY(initialScrollY);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const baseNavbarClasses = "fixed top-0 left-0 w-full h-20 text-black shadow-sm z-50 flex items-center justify-between px-6 sm:px-10";
 
   return (
-    <div className="fixed top-0 left-0 w-full h-20 text-black shadow-sm z-50 flex items-center justify-between px-6 sm:px-10">
+    <div className={`${baseNavbarClasses} ${navbarBgClass} transition-all duration-300 ease-in-out`}>
       {/* Logo Section */}
       <Link href="/" className="text-4xl font-bold text-black">
         MS
@@ -54,7 +90,7 @@ const Sidebar = () => {
 
       {/* Mobile Menu - Absolutely Positioned, shown when isMobileMenuOpen is true */}
       {isMobileMenuOpen && (
-        <div className="absolute top-20 left-0 w-full bg-white shadow-lg md:hidden z-40">
+        <div className={`absolute top-20 left-0 w-full shadow-lg md:hidden z-40 ${navbarBgClass} transition-all duration-300 ease-in-out`}>
           <ul className="flex flex-col items-center space-y-4 py-4">
             <li><Link href="/aboutme" className="block text-sm font-semibold uppercase tracking-wider text-yellow-700 px-2 py-2 hover:bg-gray-100 w-full text-center">ABOUT ME</Link></li>
             <li><Link href="/projects" className="block text-sm font-semibold uppercase tracking-wider text-yellow-700 px-2 py-2 hover:bg-gray-100 w-full text-center">PROJECTS</Link></li>
