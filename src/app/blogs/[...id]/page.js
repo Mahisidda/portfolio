@@ -8,16 +8,16 @@ export default async function BlogPage({ params }) {
 
   if (!blog) {
     return (
-      <div className="max-w-4xl font-mono mx-auto px-4 py-8">
+      <div className="max-w-4xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold">Blog not found</h1>
       </div>
     );
   }
 
   return (
-    <div className="max-w-4xl font-mono mx-auto px-5 py-8">
-      <h1 className="text-3xl font-mono font-bold mb-4">{blog.title}</h1>
-      <div className="flex items-center  text-sm text-gray-900 mb-6">
+    <div className="max-w-4xl mx-auto px-5 py-8">
+      <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
+      <div className="flex items-center text-sm text-gray-900 mb-6">
         <span>{blog.date}</span>
         <span className="mx-2">•</span>
         <span>{blog.readTime}</span>

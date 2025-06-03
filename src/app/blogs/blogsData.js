@@ -75,7 +75,7 @@ export const blogs = [
 
     <p>In the end, I got a working, production-ready recommendation system, Where user can get recommendations based on their preferences and click on the Goodreads link for more information, that's not just fast but also feels like a real product. 
     I learned a ton about ML engineering, API design, and the real-world challenges of building something that actually works for users. 
-    It's not just about the code—it's about the whole system, how it works, and how to make it work for real people. </p> <br/>
+    It's not just about the code it's about the whole system, how it works, and how to make it work for real people. </p> <br/>
 
 
     <div style="margin-top: 20px; margin-bottom: 20px; max-width: 100%;">

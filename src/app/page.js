@@ -16,6 +16,30 @@ const PortfolioPage = () => {
     });
   }, []);
 
+  const testimonialsData = [
+    {
+      id: 1,
+      quote: "Working with Mahi was a game-changer for our project. Their expertise in AI and proactive approach helped us achieve results beyond our expectations.",
+      name: "Arvind Mohan",
+      role: "Co-founder,CPO, hashmint",
+      avatar: "alex.png", // Placeholder path, replace with actual image
+    },
+    {
+      id: 2,
+      quote: "",
+      name: "Yaswanth Rayapati",
+      role: "Co-founder,CEO,hashmint",
+      avatar: "emily.png", // Placeholder path, replace with actual image
+    },
+    {
+      id: 3,
+      quote: "",
+      name: "Karthik Sarvanan",
+      role: "Founding Engineer, hashmint",
+      avatar: "samuel.png", // Placeholder path, replace with actual image
+    },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
       <div className="p-6 sm:p-10 md:p-[50px] bg-white">
@@ -105,6 +129,31 @@ const PortfolioPage = () => {
             </div>
           </div>
           {/* Column 2: Project Image - REMOVED */}
+        </div>
+
+        {/* Section 4: Testimonials */}
+        <div className="mt-10 md:mt-16" data-aos="fade-up" data-aos-delay="200">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-black tracking-tight text-center">
+            Here's what they say about me!
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonialsData.map((testimonial) => (
+              <div key={testimonial.id} className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                {/* Optional: Avatar
+                <div className="flex justify-center mb-4">
+                  <img src={testimonial.avatar} alt={testimonial.name} className="w-20 h-20 rounded-full object-cover" />
+                </div>
+                */}
+                <p className="text-gray-700 italic text-base leading-relaxed mb-4 flex-grow">
+                  "{testimonial.quote}"
+                </p>
+                <div className="mt-auto">
+                  <p className="font-semibold text-black text-right">- {testimonial.name}</p>
+                  <p className="text-gray-600 text-sm text-right">{testimonial.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
