@@ -22,23 +22,26 @@ const PortfolioPage = () => {
       quote: "Working with Mahi was a game-changer for our project. Their expertise in AI and proactive approach helped us achieve results beyond our expectations.",
       name: "Arvind Mohan",
       role: "Co-founder,CPO, hashmint",
-      avatar: "alex.png", // Placeholder path, replace with actual image
+      avatar: "alex.png",
     },
     {
       id: 2,
-      quote: "",
+      quote: "Mahi's deep understanding of ML and dedication were instrumental in our project's success. A true asset to any team!",
       name: "Yaswanth Rayapati",
       role: "Co-founder,CEO,hashmint",
-      avatar: "emily.png", // Placeholder path, replace with actual image
+      avatar: "emily.png",
     },
     {
       id: 3,
-      quote: "",
+      quote: "The RAG model Mahi built was top-notch, perfectly tailored to our needs and delivered with impressive speed and quality.",
       name: "Karthik Sarvanan",
       role: "Founding Engineer, hashmint",
-      avatar: "samuel.png", // Placeholder path, replace with actual image
+      avatar: "samuel.png",
     },
   ];
+
+  // Duplicate testimonials for a seamless loop
+  const scrollingTestimonials = [...testimonialsData, ...testimonialsData];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -76,10 +79,10 @@ const PortfolioPage = () => {
           </div>
         </div>
 
-        {/* Section 2: Projects - NEWLY ADDED SECTION */}
-        <div className="flex flex-col md:flex-row" data-aos="fade-up" data-aos-delay="200">
+        {/* Section 2: Projects and Tools - Combined Section */}
+        <div className="flex flex-col md:flex-row gap-8" data-aos="fade-up" data-aos-delay="200">
           {/* Column 1: Project Description */}
-          <div className="w-full md:w-1/2 md:pr-4 mb-8 md:mb-0 flex flex-col">
+          <div className="w-full md:w-1/2 flex flex-col">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-black tracking-tight">
               My Work
             </h2>
@@ -92,31 +95,11 @@ const PortfolioPage = () => {
                 apply deep learning techniques effectively, and develop AI solutions aligned with real-world user needs.
                 </p>
               </div>
-              <div>
-                
-              </div>
-              {/* Add more project items here as needed */}
             </div>
           </div>
-          {/* Column 2: Project Image */}
-          <div style={{ marginTop: '20px', marginBottom: '20px', maxWidth: '100%' }}>
-      <video
-        style={{ width: '100%', height: 'auto', maxHeight: '500px', display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
-        autoPlay
-        loop
-        muted
-        playsInline
-        src="/brec-gr.mp4"
-      >
-        Your browser does not support the video tag.
-      </video>
-    </div>
-        </div>
-        
-        {/* Section 3: Tools I Work With */}
-        <div className="flex flex-col md:flex-row mt-10 md:mt-16" data-aos="fade-up" data-aos-delay="200">
-          {/* Column 1: Tools Description - Now takes full width */}
-          <div className="w-full md:pr-4 mb-8 md:mb-0 flex flex-col">
+
+          {/* Column 2: Tools Description */}
+          <div className="w-full md:w-1/2 flex flex-col">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-black tracking-tight">
               Tools I Work With
             </h2>
@@ -125,34 +108,38 @@ const PortfolioPage = () => {
                   worked with <Link href="/skills" legacyBehavior><a className="text-red-600 hover:text-yellow-600 font-semibold underline">broad range of tools</a></Link> , 
                   but the ones I enjoy and frequently use include:
                    FAISS, scikit-learn, NumPy, Pandas,Flask, Redis etc.,                </p>
-              {/* Add more tool details or categories here as needed */}
             </div>
           </div>
-          {/* Column 2: Project Image - REMOVED */}
         </div>
 
-        {/* Section 4: Testimonials */}
+        {/* Section 3: Testimonials - Updated for scrolling marquee */}
         <div className="mt-10 md:mt-16" data-aos="fade-up" data-aos-delay="200">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-black tracking-tight text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-black tracking-tight text-center">
             Here's what they say about me!
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonialsData.map((testimonial) => (
-              <div key={testimonial.id} className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                {/* Optional: Avatar
-                <div className="flex justify-center mb-4">
-                  <img src={testimonial.avatar} alt={testimonial.name} className="w-20 h-20 rounded-full object-cover" />
+          <div className="overflow-hidden w-full max-w-[1920px] mx-auto relative group">
+            <div className="flex animate-scroll-loop group-hover:pause-animation">
+              {scrollingTestimonials.map((testimonial, index) => (
+                <div 
+                  key={`${testimonial.id}-${index}`}
+                  className="bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col flex-shrink-0 w-[600px] mr-8 border border-gray-100"
+                  style={{ minHeight: '250px' }}
+                >
+                  {/* Optional: Avatar - uncomment if you have avatar images 
+                  <div className="flex justify-center mb-4">
+                    <img src={testimonial.avatar} alt={testimonial.name} className="w-24 h-24 rounded-full object-cover shadow-md" />
+                  </div>
+                  */}
+                  <p className="text-gray-700 italic text-lg leading-relaxed mb-6 flex-grow">
+                    "{testimonial.quote}"
+                  </p>
+                  <div className="mt-auto pt-4 border-t border-gray-200">
+                    <p className="font-semibold text-slate-800 text-right text-md">- {testimonial.name}</p>
+                    <p className="text-gray-600 text-sm text-right">{testimonial.role}</p>
+                  </div>
                 </div>
-                */}
-                <p className="text-gray-700 italic text-base leading-relaxed mb-4 flex-grow">
-                  "{testimonial.quote}"
-                </p>
-                <div className="mt-auto">
-                  <p className="font-semibold text-black text-right">- {testimonial.name}</p>
-                  <p className="text-gray-600 text-sm text-right">{testimonial.role}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

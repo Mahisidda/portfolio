@@ -12,6 +12,15 @@ module.exports = {
         mono: ['var(--font-geist-mono)'], // Your existing Geist Mono
         'homemade-apple': ['"Homemade Apple"', 'cursive'], // Added Homemade Apple
       },
+      animation: {
+        'scroll-loop': 'scroll-loop 60s linear infinite',
+      },
+      keyframes: {
+        'scroll-loop': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
+      },
       // ... any other extensions you have
     },
   },
