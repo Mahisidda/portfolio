@@ -19,25 +19,25 @@ const PortfolioPage = () => {
   const testimonialsData = [
     {
       id: 1,
-      quote: "Working with Mahi was a game-changer for our project. Their expertise in AI and proactive approach helped us achieve results beyond our expectations.",
+      quote: "Mahi is a thorough professional. He was part of our AI research + dev team and led a team of 3 to create a highly optimised RAG model from scratch, customised for our hardware architecture.\n\nThe deliverables included prototyping, research, and model tweaks to adhere to cost structures, understanding business needs, and further incorporating changes from UX feedback with seamless collaboration.\n\nWould highly recommend, kudos!",
       name: "Arvind Mohan",
       role: "Co-founder,CPO, hashmint",
-      avatar: "alex.png",
+      avatar: "arvind.jpeg",
     },
     {
       id: 2,
-      quote: "Mahi's deep understanding of ML and dedication were instrumental in our project's success. A true asset to any team!",
+      quote: "Mahi laid the foundational architecture for AI at HashMint with the launch of MintPDF, our Retrieval-Augmented Generation (RAG) system that answers queries directly from user-uploaded documents.\n\n He engineered the entire backend pipeline, integrated OpenAI APIs, and built production-grade LLM workflows that made MintPDF fast, accurate, and reliable from day one. That foundation has been critical.\n\n Much of our rapid progress in AI since then has been possible because of the strong technical and architectural base Mahi set early on. He is a true 100x engineer who moves fast, solves hard problems, and quietly unlocks massive leverage for the entire team.",
       name: "Yaswanth Rayapati",
       role: "Co-founder,CEO,hashmint",
-      avatar: "emily.png",
+      avatar: "ryuk.jpeg",
     },
-    {
-      id: 3,
-      quote: "The RAG model Mahi built was top-notch, perfectly tailored to our needs and delivered with impressive speed and quality.",
-      name: "Karthik Sarvanan",
-      role: "Founding Engineer, hashmint",
-      avatar: "samuel.png",
-    },
+    // {
+    //   id: 3,
+    //   quote: "The RAG model Mahi built was top-notch, perfectly tailored to our needs and delivered with impressive speed and quality.",
+    //   name: "Karthik Sarvanan",
+    //   role: "Founding Engineer, hashmint",
+    //   avatar: "samuel.png",
+    // },
   ];
 
   // Duplicate testimonials for a seamless loop
@@ -130,12 +130,19 @@ const PortfolioPage = () => {
                     <img src={testimonial.avatar} alt={testimonial.name} className="w-24 h-24 rounded-full object-cover shadow-md" />
                   </div>
                   */}
-                  <p className="text-gray-700 italic text-lg leading-relaxed mb-6 flex-grow">
+                  <p className="text-gray-700 italic text-lg leading-relaxed mb-6 flex-grow whitespace-pre-line">
                     "{testimonial.quote}"
                   </p>
-                  <div className="mt-auto pt-4 border-t border-gray-200">
-                    <p className="font-semibold text-slate-800 text-right text-md">- {testimonial.name}</p>
-                    <p className="text-gray-600 text-sm text-right">{testimonial.role}</p>
+                  <div className="mt-auto pt-4 border-t border-gray-200 flex items-center gap-4">
+                    <img 
+                      src={`/${testimonial.avatar}`}
+                      alt={testimonial.name} 
+                      className="w-12 h-12 rounded-full object-cover shadow-md" 
+                    />
+                    <div>
+                      <p className="font-semibold text-slate-800 text-left text-md">- {testimonial.name}</p>
+                      <p className="text-gray-600 text-sm text-left">{testimonial.role}</p>
+                    </div>
                   </div>
                 </div>
               ))}
