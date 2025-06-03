@@ -7,7 +7,7 @@ import {
 import {
   SiTypescript, SiKotlin, SiScikitlearn, SiNumpy, SiPandas, SiOpenai,
   SiFlask, SiFastapi, SiRedis, SiNextdotjs, SiTailwindcss, SiPostgresql,
-  SiPostman, SiVercel, SiRender, SiVscode, SiJupyter,
+  SiPostman, SiVercel, SiRender, SiVisualstudiocode, SiJupyter,
   SiAndroidstudio
 } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io5';
@@ -81,7 +81,7 @@ const skillSet = [
   {
     categoryTitle: "Dev Environment",
     skills: [
-      { name: "VS Code", icon: <SiVscode className="text-blue-500" /> },
+      { name: "VS Code", icon: <SiVisualstudiocode className="text-blue-500" /> },
       { name: "Jupyter", icon: <SiJupyter className="text-orange-500" /> },
       { name: "Android Studio", icon: <SiAndroidstudio className="text-green-600" /> },
       { name: "zsh", icon: <FaTerminal className="text-gray-600" /> }, 
