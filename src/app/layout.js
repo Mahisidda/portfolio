@@ -10,9 +10,16 @@ const geistSans = Geist({
 
 export const metadata = {
   title: "Mahi Sidda",
-  description: "All about The Mahi Sidda",
-  icons:{
-    icon: "/arc.png",
+  description: "Portfolio",
+  icons: {
+    icon: [
+      { url: "/stark.png?v=2", type: "image/png" },
+    ],
+    apple: [
+      { url: "/stark.png?v=2", type: "image/png", sizes: "180x180" }, // Apple touch icon
+    ],
+    // You can add other icon types if needed, e.g., shortcut for older browsers
+    // shortcut: "/stark.png?v=2", 
   }
 };
 

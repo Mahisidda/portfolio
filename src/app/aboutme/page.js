@@ -31,7 +31,7 @@ function About() {
         <div className="space-y-2">
           <h2 className="text-2xl font-bold text-black mb-2">From Classroom to Startup Trenches</h2>
           <p className="text-base text-justify text-black">
-            At Hashmint, I helped develop MintPDF - a Retrieval-Augmented Generation (RAG) platform revolutionizing document interaction. Collaborating with engineers and founders,
+            At Hashmint, I helped develop MintPDF, a Retrieval-Augmented Generation (RAG) platform revolutionizing document interaction. Collaborating with engineers and founders,
             I implemented AI-driven querying systems using transformer models, gaining invaluable experience in scaling NLP solutions and shipping production-ready tools.
             This startup journey taught me agile development, user-centric design, and the art of transforming academic concepts into impactful products.
           </p>
@@ -42,7 +42,7 @@ function About() {
           <h2 className="text-2xl font-bold text-black mb-2">Building Tomorrow's Intelligent Solutions</h2>
           <p className="text-base text-justify text-black">
             I'm now focused on bridging AI's theoretical promise with real-world implementation. 
-            I don't just prototype—I ship. I care about inference time, system reliability, vector space behavior, and data integrity.
+            I don't just prototype I ship. I care about inference time, system reliability, vector space behavior, and data integrity.
             Every model I build is optimized not just for accuracy, but for performance and real-world usability.
             Whether I'm enhancing NLP for cybersecurity or architecting scalable backend systems, I apply a product mindset grounded in deep technical intuition. <br />
             <br /> I am not chasing trends I'm mastering fundamentals, learning from friction, and building a career rooted in solving real problems through intelligent systems.
