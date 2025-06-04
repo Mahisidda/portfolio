@@ -151,15 +151,7 @@ const PortfolioPage = () => {
         </div>
       </div>
 
-      {/* Section: GitHub Presence*/}
-      {/* <section className="py-10 md:py-16 bg-white max-w-7xl overflow-hidden" data-aos="fade-up" data-aos-delay="250">
-        <div className="container mx-auto px-9">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-black tracking-tight text-center">
-            GitHub
-          </h2>
-          <GitHubContributions />
-        </div>
-      </section> */}
+     
 
       {/* Section 4: Let's Make AI Talk - Full Bleed Background */}
       <div className="mt-10 md:mt-16 bg-black flex flex-col flex-grow" data-aos="fade-up">

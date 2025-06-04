@@ -28,7 +28,7 @@ const Sidebar = () => {
         setNavLinkColorClass('text-red-700');
         setHamburgerColorClass('text-gray-500 hover:text-gray-700');
       } else {
-        setNavbarBgClass('bg-black shadow-sm');
+        setNavbarBgClass('bg-black/75 shadow-sm backdrop-blur-lg');
         setLogoColorClass('text-white');
         setNavLinkColorClass('text-gray-200 hover:text-white');
         setHamburgerColorClass('text-gray-300 hover:text-white');
@@ -92,7 +92,7 @@ const Sidebar = () => {
             {/* Mobile links color (text-yellow-700) should be fine on black bg. Add transition if navbar elements also transition their text color */}
             <li><Link href="/aboutme" className="block text-sm font-semibold uppercase tracking-wider text-yellow-700 px-2 py-2 hover:bg-gray-700/50 w-full text-center rounded transition-colors duration-150">ABOUT ME</Link></li>
             <li><Link href="/projects" className="block text-sm font-semibold uppercase tracking-wider text-yellow-700 px-2 py-2 hover:bg-gray-700/50 w-full text-center rounded transition-colors duration-150">PROJECTS</Link></li>
-            <li><Link href="/resume" className="block text-sm font-semibold uppercase tracking-wider text-yellow-700 px-2 py-2 hover:bg-gray-700/50 w-full text-center rounded transition-colors duration-150">RESUME</Link></li>
+            <li><Link href="/workexperience" className="block text-sm font-semibold uppercase tracking-wider text-yellow-700 px-2 py-2 hover:bg-gray-700/50 w-full text-center rounded transition-colors duration-150">RESUME</Link></li>
             <li><Link href="/blogs" className="block text-sm font-semibold uppercase tracking-wider text-yellow-700 px-2 py-2 hover:bg-gray-700/50 w-full text-center rounded transition-colors duration-150">BLOGS</Link></li>
             <li>
               <a href="mailto:mahisidda7@gmail.com" className="block w-full px-2">

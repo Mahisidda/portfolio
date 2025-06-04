@@ -101,7 +101,7 @@ function ProjectsPage() {
                   ) : project.demoLink && project.demoLink !== "#" ? (
                     <Link
                       href={project.demoLink}
-                      className="inline-flex items-center justify-center bg-black text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors w-full sm:w-auto text-center"
+                      className="inline-flex items-center justify-center bg-black text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-red-800 transition-colors w-full sm:w-auto text-center"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`View live demo of ${project.title}`}
