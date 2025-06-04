@@ -122,7 +122,7 @@ const PortfolioPage = () => {
               {scrollingTestimonials.map((testimonial, index) => (
                 <div 
                   key={`${testimonial.id}-${index}`}
-                  className="bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col flex-shrink-0 w-[600px] mr-8 border border-gray-100"
+                  className="bg-gray-50 p-6 sm:p-8 rounded-xl shadow-lg flex flex-col flex-shrink-0 w-[85vw] mr-4 md:w-[540px] md:mr-6 lg:w-[600px] lg:mr-8 border border-gray-100"
                   style={{ minHeight: '250px' }}
                 >
                   {/* Optional: Avatar - uncomment if you have avatar images 
@@ -130,18 +130,18 @@ const PortfolioPage = () => {
                     <img src={testimonial.avatar} alt={testimonial.name} className="w-24 h-24 rounded-full object-cover shadow-md" />
                   </div>
                   */}
-                  <p className="text-gray-700 italic text-lg leading-relaxed mb-6 flex-grow whitespace-pre-line">
+                  <p className="text-gray-700 italic text-base sm:text-lg leading-relaxed mb-6 flex-grow whitespace-pre-line">
                     "{testimonial.quote}"
                   </p>
-                  <div className="mt-auto pt-4 border-t border-gray-200 flex items-center gap-4">
+                  <div className="mt-auto pt-4 border-t border-gray-200 flex items-center gap-3 sm:gap-4">
                     <img 
                       src={`/${testimonial.avatar}`}
                       alt={testimonial.name} 
-                      className="w-12 h-12 rounded-full object-cover shadow-md" 
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover shadow-md" 
                     />
                     <div>
-                      <p className="font-semibold text-slate-800 text-left text-md">- {testimonial.name}</p>
-                      <p className="text-gray-600 text-sm text-left">{testimonial.role}</p>
+                      <p className="font-semibold text-slate-800 text-left text-sm sm:text-md">- {testimonial.name}</p>
+                      <p className="text-gray-600 text-xs sm:text-sm text-left">{testimonial.role}</p>
                     </div>
                   </div>
                 </div>
