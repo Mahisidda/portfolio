@@ -4,7 +4,7 @@ export default function WorkExperiencePage() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center text-center p-4 bg-gray-50">
       <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-8">
-        OOPS... UNDER CONSTRUCTION
+        It is on its way
       </h1>
       <img 
         src="/cap.webp" 
