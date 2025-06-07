@@ -72,7 +72,7 @@ const PortfolioPage = () => {
           100% { transform: translateX(-50%); }
         }
         .animate-scroll-loop-corrected {
-          animation: scroll-loop-corrected 60s linear infinite;
+          animation: scroll-loop-corrected 40s linear infinite;
         }
       `}</style>
       <div className="flex flex-col min-h-screen">
