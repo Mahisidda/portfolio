@@ -55,10 +55,10 @@ const Sidebar = () => {
       {/* Navigation Links */}
       <nav className="hidden md:flex justify-center flex-grow">
         <ul className="flex items-center space-x-20">
-          <li><Link href="/aboutme" className={`text-sm font-semibold uppercase tracking-wider px-2 ${navLinkColorClass} transition-colors duration-300 ease-in-out`}>ABOUT ME</Link></li>
-          <li><Link href="/projects" className={`text-sm font-semibold uppercase tracking-wider px-2 ${navLinkColorClass} transition-colors duration-300 ease-in-out`}>PROJECTS</Link></li>
-          <li><Link href="/workexperience" className={`text-sm font-semibold uppercase tracking-wider px-2 ${navLinkColorClass} transition-colors duration-300 ease-in-out`}>RESUME</Link></li>
-          <li><Link href="/blogs" className={`text-sm font-semibold uppercase tracking-wider px-2 ${navLinkColorClass} transition-colors duration-300 ease-in-out`}>BLOGS</Link></li>
+          <li><Link href="/aboutme" className={`text-sm font-semibold uppercase tracking-wider px-2 ${navLinkColorClass} transition-colors duration-300 ease-in-out relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-yellow-500 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100`}>ABOUT ME</Link></li>
+          <li><Link href="/projects" className={`text-sm font-semibold uppercase tracking-wider px-2 ${navLinkColorClass} transition-colors duration-300 ease-in-out relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-yellow-500 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100`}>PROJECTS</Link></li>
+          <li><Link href="/workexperience" className={`text-sm font-semibold uppercase tracking-wider px-2 ${navLinkColorClass} transition-colors duration-300 ease-in-out relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-yellow-500 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100`}>RESUME</Link></li>
+          <li><Link href="/blogs" className={`text-sm font-semibold uppercase tracking-wider px-2 ${navLinkColorClass} transition-colors duration-300 ease-in-out relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-yellow-500 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100`}>BLOGS</Link></li>
         </ul>
       </nav>
 

@@ -74,6 +74,42 @@ const PortfolioPage = () => {
         .animate-scroll-loop-corrected {
           animation: scroll-loop-corrected 40s linear infinite;
         }
+        @keyframes paint-and-vanish {
+          0% {
+            transform: scaleX(0);
+            transform-origin: left;
+          }
+          50% {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+          50.1% {
+            transform-origin: right;
+          }
+          100% {
+            transform: scaleX(0);
+            transform-origin: right;
+          }
+        }
+        .name-container h1 {
+          position: relative;
+          display: inline-block;
+        }
+        .name-container h1::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #eab308;
+            transform: scaleX(0);
+            z-index: -1;
+        }
+        .name-container.aos-animate h1::after {
+            animation: paint-and-vanish 1.2s ease-out forwards;
+            animation-delay: 0.2s; /* Delay after fade-in */
+        }
       `}</style>
       <div className="flex flex-col min-h-screen">
         <div className="p-6 sm:p-10 md:p-[50px] bg-white">
@@ -90,7 +126,7 @@ const PortfolioPage = () => {
             {/* Text Column */}
             <div className="w-full md:w-1/2 md:pl-4 flex flex-col justify-start">
               {/* Container for Mahi Sidda name */}
-              <div className="mb-5 leading-tight md:leading-normal" data-aos="fade-left" data-aos-delay="100">
+              <div className="mb-5 leading-tight md:leading-normal name-container" data-aos="fade-left" data-aos-delay="100">
                 <h1 className="font-sans text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter text-black">
                   Mahi Sidda
                 </h1>
