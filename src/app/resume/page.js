@@ -9,41 +9,43 @@ export default function Resume() {
   const downloadUrl = `https://drive.google.com/uc?export=download&id=${googleDriveFileId}`;
 
   return (
-    <div className="w-full h-screen p-8 bg-gray-50">
-      <div className="mx-auto max-w-4xl">
-        <h1 className="text-3xl font-bold mb-6 text-gray-800">My Resume</h1>
-        
-        {/* PDF Display Section */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <iframe 
-            src={embedUrl}
-            className="w-full h-screen min-h-[800px]"
-            frameBorder="0"
-            title="Resume PDF Viewer"
-          >
-            <p className="text-gray-600 p-4">
-              Your browser does not support PDFs. 
-              <a 
-                href={downloadUrl}
-                className="text-blue-600 hover:underline ml-1"
-              >
-                Download the resume PDF
-              </a>
-            </p>
-          </iframe>
-        </div>
+    <div className="flex flex-col min-h-screen bg-gray-50">
+      <main className="flex-grow w-full p-8">
+        <div className="mx-auto max-w-4xl">
+          <h1 className="text-3xl font-bold mb-6 text-gray-800">My Resume</h1>
+          
+          {/* PDF Display Section */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <iframe 
+              src={embedUrl}
+              className="w-full h-screen min-h-[800px]"
+              frameBorder="0"
+              title="Resume PDF Viewer"
+            >
+              <p className="text-gray-600 p-4">
+                Your browser does not support PDFs. 
+                <a 
+                  href={downloadUrl}
+                  className="text-blue-600 hover:underline ml-1"
+                >
+                  Download the resume PDF
+                </a>
+              </p>
+            </iframe>
+          </div>
 
-        {/* Download Button */}
-        <div className="mt-6 text-center">
-          <a
-            href={downloadUrl}
-            download
-            className="inline-block bg-red-600 text-white px-6 py-3 rounded-full hover:bg-yellow-600 transition-colors duration-200"
-          >
-            Download PDF
-          </a>
+          {/* Download Button */}
+          <div className="mt-6 text-center">
+            <a
+              href={downloadUrl}
+              download
+              className="inline-block bg-red-600 text-white px-6 py-3 rounded-full hover:bg-yellow-600 transition-colors duration-200"
+            >
+              Download PDF
+            </a>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }
