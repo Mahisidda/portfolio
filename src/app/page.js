@@ -241,7 +241,7 @@ const PortfolioPage = () => {
                 </a>
               </div>
               <a
-                href="#" // Replace # with the actual path to your resume
+                href="https://drive.google.com/file/d/1N6BLo8NweHCPOfO1ph83zPWYUGBq_u3e/view?usp=share_link" // Replace # with the actual path to your resume
                 className="inline-block bg-red-800 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors duration-300"
               >
                 Resume-mahisidda.pdf
