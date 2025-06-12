@@ -3,5 +3,6 @@ export default function Dummy() {
         <div>
             <h1>Dummy</h1>
         </div>
+        <div className="flex flex-col items-center justify-center h-screen">This is a dummy page</div>
     )
 }
