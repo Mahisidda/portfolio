@@ -171,10 +171,9 @@ const PortfolioPage = () => {
                 Tools I Work With
               </h2>
               <div className="space-y-8">
-                  <p className="text-base sm:text-lg leading-relaxed max-w-md text-justify text-black "> I've worked with a  
-                    worked with <Link href="/skills" legacyBehavior><a className="text-red-600 hover:text-yellow-600 font-semibold underline">broad range of tools</a></Link> , 
-                    but the ones I enjoy and frequently use include:
-                     FAISS, scikit-learn, NumPy, Pandas,Flask, Redis etc.,                </p>
+                  <p className="text-base sm:text-lg leading-relaxed max-w-md text-justify text-black "> 
+                    I've worked with a worked with <Link href="/skills" legacyBehavior><a className="text-red-600 hover:text-yellow-600 font-semibold underline">broad range of tools</a></Link> , 
+                    but the ones I enjoy and frequently use as a framework include: Python,NumPy, pandas, scikit-learn, PyTorch, HuggingFace, FastAPI(for deployment),Docker(for production),Git/GitHub</p>
               </div>
             </div>
           </div>
