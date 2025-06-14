@@ -12,8 +12,7 @@ export default function WorkExperiencePage() {
         className="mx-auto mb-6 w-auto max-h-72 sm:max-h-96 rounded-lg shadow-md"
       />
       <p className="text-xl sm:text-2xl text-gray-600">
-        It will be here anytime soon, Thank you for your patience! thanks you for your patience!
-      </p>
+        It will be here anytime soon, Thank you for your patience! I would really appreciate it if you could check back later.     </p>
     </div>
   );
 }
