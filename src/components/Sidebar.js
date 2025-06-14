@@ -64,7 +64,7 @@ const Sidebar = () => {
 
       {/* Right Group: Button & Hamburger Menu Icon */}
       <div className="flex items-center space-x-4">
-        <a href="mailto:mahisidda7@gmail.com" className="hidden md:block">
+        <a href="mailto:m7sidda@gmail.com" className="hidden md:block">
           {/* Button color remains constant, or can be adjusted if needed */}
           <button className="bg-red-800 text-white font-semibold py-3 px-6 rounded-full text-sm uppercase tracking-wider hover:bg-yellow-600 transition-colors">
             Let's Connect!
@@ -99,7 +99,7 @@ const Sidebar = () => {
             <li><Link href="/resume" onClick={() => setIsMobileMenuOpen(false)} className="block text-sm font-semibold uppercase tracking-wider text-yellow-700 px-2 py-2 hover:bg-gray-700/50 w-full text-center rounded transition-colors duration-150">RESUME</Link></li>
             <li><Link href="/blogs" onClick={() => setIsMobileMenuOpen(false)} className="block text-sm font-semibold uppercase tracking-wider text-yellow-700 px-2 py-2 hover:bg-gray-700/50 w-full text-center rounded transition-colors duration-150">BLOGS</Link></li>
             <li>
-              <a href="mailto:mahisidda7@gmail.com" onClick={() => setIsMobileMenuOpen(false)} className="block w-full px-2">
+              <a href="mailto:m7sidda@gmail.com" onClick={() => setIsMobileMenuOpen(false)} className="block w-full px-2">
                 <button className="w-full bg-red-800 text-white font-semibold py-3 px-6 text-sm uppercase tracking-wider hover:bg-yellow-600 transition-colors mt-2">
                   Let's Connect!
                 </button>

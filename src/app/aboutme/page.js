@@ -55,7 +55,7 @@ function About() {
           Want to work together or just say hi? Feel free to reach out!
         </p>
         <a
-          href="mailto:mahisidda7@gmail.com"
+          href="mailto:m7sidda@gmail.com"
           className="inline-block text-base bg-yellow-600 text-white px-6 py-2 rounded-3xl font-medium hover:bg-red-800 transition-all duration-300"
         >
           Let's Connect!
@@ -88,7 +88,7 @@ function About() {
             <SiX size={28} />
           </a> */}
           <a 
-            href="mailto:mahisidda7@gmail.com" 
+            href="mailto:m7sidda@gmail.com" 
             className="text-gray-900 hover:text-gray-800 transition-all duration-300"
           >
             <FiMail size={28} />
